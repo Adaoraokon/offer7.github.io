@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OFFER 7</title>
+    <style>
+    header{
+            background-color: brown;
+            color:#fff;
+            text-align: center;
+            padding: 34px;
+            text-transform: uppercase;
+
+       }
+      
+
+     
+
+        h1 {
+            font-size: 50px;
+            margin: 100;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 30 auto;
+            padding: 120px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: blue;
+            color: #ff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+       
+        }
+ 
+ 
+    </style>
+</head>
+<body>
+    <header>
+      
+
+    </header>
+    <div class="container">
+        <form id="transferForm">
+            <div class="form-group">
+
+                <label for="sender">Sender:</label>
+                <input type="text" id="sender" name="sender" required>
+            </div>
+            <div class="form-group">
+                <label for="recipient">Recipient:</label>
+                <input type="text" id="recipient" name="recipient" required>
+            </div>
+            <div class="form-group">
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" name="amount" required>
+            </div>
+            <button type="submit">Transfer Money</button>
+            
+        <h1>Offer 7</h1>
+        </form>
+            
+              
+    </div>
+      
+    <script>
+        const form = document.getElementById('transferForm');
+        form.addEventListener('submit', transferMoney);
+
+        function transferMoney(event) {
+            event.preventDefault();
+
+            const sender = document.getElementById('sender').value;
+            const recipient = document.getElementById('recipient').value;
+            const amount = document.getElementById('amount').value;
+
+            // You can perform additional validation and backend processing here
+
+            alert(`Transfer ${amount} from ${sender} to ${recipient}`);
+            form.reset();
+        }
+   
+           
+}
+  
+    </script>
+</body>
+</html>
